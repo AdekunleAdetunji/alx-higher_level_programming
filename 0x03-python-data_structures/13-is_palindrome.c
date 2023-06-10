@@ -32,7 +32,7 @@ int is_palindrome(listint_t **head)
 	listint_t *temp;
 
 	if (!head || !(*head))
-		return (0);
+		return (1);
 
 	node_count = count(*head);
 
