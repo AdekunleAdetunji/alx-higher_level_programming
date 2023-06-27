@@ -26,6 +26,8 @@ class Square():
               or not isinstance(self.__position[0], int)
               or not isinstance(self.__position[1], int)):
             raise TypeError("position must be a tuple of 2 positive integers")
+        elif self.__position[0] < 0 or self.__position[1] < 0:
+            raise TypeError("position must be a tuple of 2 positive integers")
 
     def area(self):
         """Computes and return the area of the square"""
@@ -58,6 +60,8 @@ class Square():
         """A setter function to set the private attribute position"""
         if (not all([isinstance(tup, tuple), isinstance(tup[0], int),
                     isinstance(tup[1], int)]) or len(tup) != 2):
+            raise TypeError("position must be a tuple of 2 positive integers")
+        elif tup[0] < 0 or tup[1] < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
             self.__position = tup
