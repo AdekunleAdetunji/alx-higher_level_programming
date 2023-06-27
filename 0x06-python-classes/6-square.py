@@ -56,8 +56,8 @@ class Square():
     @position.setter
     def position(self, tup):
         """A setter function to set the private attribute position"""
-        if (not isinstance(tup, tuple) or len(tup) != 2
-            or not isinstance(tup[0], int) or not isinstance(tup[1], int)):
+        if (not all([isinstance(tup, tuple), isinstance(tup[0], int),
+                    isinstance(tup[1], int)]) or len(tup) != 2):
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
             self.__position = tup
