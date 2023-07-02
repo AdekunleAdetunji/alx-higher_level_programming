@@ -1,0 +1,55 @@
+This text file contain tutorial examples demonstrating how the
+add_integer() function from the 0-add_integer module works
+==============================================================
+>>> add_integer = __import__('0-add_integer').add_integer
+
+case 1:
+This case demonstrate how the add_integer() function works with the right
+number of arguments supplied
+>>> add_integer(1, 3)
+4
+
+case 2:
+This case demonstrates how the add_integer() function works with only one
+argument supplied
+>>> add_integer(2)
+100
+
+case 3:
+This case demonstrates the behaviour of the add_integer() function when one
+of the two arguments is a float
+>>> add_integer(3.1, 6)
+9
+
+case 4:
+This case shows the behaviour of the add_interger() function when argument a
+is neither float nor an integer
+>>> add_integer('1', 9)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+case 5:
+This case shows the behaviour of the add_integer() function when parameter b
+is passed a non-inter or float argument
+>>> add_integer(1, 'b')
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+case 6:
+This case shows the behaviour of the add_integer() function when a None type
+argument is supplied as the first positional argument
+>>> add_integer(None)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+case 7:
+This case shows the behaviour of the add_integer() function when a negative
+value is supplied to parameter a
+>>> add_integer(-2)
+96
+
+case 8:
+This case shows the behaviour of the add_integer() function when a float value
+and a negative value is supplied as argument
+>>> add_integer(100.3, -2)
+98

@@ -1,0 +1,40 @@
+This text file contains example implementations of the print_square() function
+in the 4-print_square module
+==============================================================================
+Usage:
+To use the print_square() function, first import it from the module using the
+   syntax below
+>>> print_square = __import__("4-print_square").print_square
+
+case 1:
+The first use case of the print_square prints a square of size equal to 3
+>>> print_square(3)
+###
+###
+###
+
+case 2:
+This case call the print_square() function with a non-integer argument
+>>> print_square("a")
+Traceback (most recent call last):
+TypeError: size must be an integer
+
+case 3:
+In this case, the print_square() function is called with a negative value
+>>> print_square(-2)
+Traceback (most recent call last):
+ValueError: size must be >= 0
+
+case 4:
+In this case, the print_square() function is called with a float value less
+   that zero
+>>> print_square(-2.4)
+Traceback (most recent call last):
+TypeError: size must be an integer
+
+case 5:
+This use case calls the print_square() function with a float value supplied to
+     it
+>>> print_square(3.2)
+Traceback (most recent call last):
+TypeError: size must be an integer

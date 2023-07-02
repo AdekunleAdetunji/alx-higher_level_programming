@@ -1,0 +1,37 @@
+This text file contains examples demonstrating how to use the say_my_name()
+     function in the 3-say_my_name module
+==========================================================================
+Usage:
+Import the module in the manner below
+>>> say_my_name = __import__("3-say_my_name").say_my_name
+
+case 1:
+This case demonstrate the correct use of the function with a string supplied
+     for both the first_name and last_name arguments of the say_my_name() function
+>>> say_my_name("Adetunji", "Adekunle")
+My name is Adetunji Adekunle
+
+case 2:
+This case demonstrate the use of the function with just a single argument and
+     the second argument not supplied
+>>> say_my_name("Adetunji")
+My name is Adetunji 
+
+case 3:
+This case demonstrate the use of the function with the first argument supplied
+     an object type that is not a string
+
+@TypeError1
+>>> say_my_name(5)
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+@TypeError2
+>>> say_my_name("Adetunji", 3)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+@TypeError3
+>>> say_my_name(None)
+Traceback (most recent call last):
+TypeError: first_name must be a string

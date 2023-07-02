@@ -1,0 +1,56 @@
+This file contains examples demonstrating the use of matrix_divided() function
+in the 2-matrix_divided module
+=============================================================================
+
+Usage: In other to use the matrix_divided() function, the function is imported
+from the module in the manner below
+>>> matrix_divided = __import__("2-matrix_divided").matrix_divided
+
+case 1:
+This case demostrates the correct use of the function
+>>> matrix_divided([[2], [2]], 2)
+[[1.0], [1.0]]
+
+case 2:
+This case demonstrates the various error that is raised when this function is
+called wrongly
+
+@TypeError1 arising from the calling of the function with invalid argument type
+>>> matrix_divided('a', 3)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+@TypeError2 arising from passing a list argument but not containing an inner
+	    list
+>>> matrix_divided(['a', 3], 2)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+@TypeError3 arising from passing a list argument of a list of list but whose
+inner list has a type that is not an int/float
+>>> matrix_divided([['a', 2], [1, 3]], 2)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+@TypeError4 arising from passing the matrix_divided "div" parameter a value that
+	    is neither of int or float type
+>>> matrix_divided([[1, 2], [3, 4]], 'a')
+Traceback (most recent call last):
+TypeError: div must be a number
+
+@TypeError5 arising from the passage of empty list to the matrix parameter
+>>> matrix_divided([], 3)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+case 3:
+This is the case when the second argument passed to the matrix_divided function
+is 0
+>>> matrix_divided([[1, 2]], 0)
+Traceback (most recent call last):
+ZeroDivisionError: division by zero
+
+case 4:
+This is the case when the matrix is a list of list with the div being a float
+>>> matrix_divided([[1, 1, 1]], 3.1)
+[[0.32, 0.32, 0.32]]
