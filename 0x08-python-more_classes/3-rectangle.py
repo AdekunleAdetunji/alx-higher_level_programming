@@ -59,4 +59,6 @@ class Rectangle():
 
     def __str__(self):
         """This method returns a printable representation of the rectangle"""
+        if self.__width == 0 or self.__height == 0:
+            return ""
         return "\n".join(["#"*self.__width for i in range(self.__height)])
