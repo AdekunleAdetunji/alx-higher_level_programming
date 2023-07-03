@@ -1,14 +1,18 @@
+#!/usr/bin/python3
 """
 This module contains a Rectangle class that creates an empty rectangle object
 and also an err_check function to check for that the right functions are passed
 when creating an instance of the class
 """
+
+
 def err_check(param, side):
     """This function checks for error in the parameter passed to class"""
     if not isinstance(param, int):
         raise TypeError(f"{side} must be an integer")
     if param < 0:
         raise ValueError(f"{side} must be >= 0")
+
 
 class Rectangle():
     """
