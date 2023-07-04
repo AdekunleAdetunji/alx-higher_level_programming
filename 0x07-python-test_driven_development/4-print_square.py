@@ -10,8 +10,13 @@ Usage:
 
 
 def print_square(size):
-    """This function prints a hash filled square of size equal to an
-    integer value supplied to the function"""
+    """
+    This function prints a hash filled square of size equal to an
+    integer value supplied to the function
+
+    Args
+    @size: The size of the square to be printed
+    """
     if type(size) != int:
         raise TypeError("size must be an integer")
     if size < 0:

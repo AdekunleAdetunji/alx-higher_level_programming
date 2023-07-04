@@ -10,8 +10,13 @@ b
 
 
 def text_indentation(text):
-    """This function adds two new line characters after each occurrences of the
-    characters '.:?'"""
+    """
+    This function adds two new line characters after each occurrences of the
+    characters '.:?'
+
+    Args
+    @text: The text which that is to be formatted
+    """
     if type(text) != str:
         raise TypeError("text must be a string")
 

@@ -6,7 +6,14 @@ uniformly divide a nested list by a given value
 
 
 def matrix_divided(matrix, div):
-    """This function divides all the elements of a matrix by div"""
+    """
+    This function divides all the elements of a matrix by div
+
+
+    Args
+    @matrix: The matrix whose value is to be divided
+    @div: The value to use in dividing the matrix
+    """
     invalid_mat = "matrix must be a matrix (list of lists) of integers/floats"
     if type(matrix) != list or not matrix:
         raise TypeError(invalid_mat)
