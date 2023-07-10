@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-This module contains a function that checks wether a class derives
-from another class
+This module contains a function that checks wether a class is a child
+of another class
 """
 
 
