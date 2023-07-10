@@ -78,3 +78,8 @@ Calling a method of the child class on a parent class
 >>> list().print_sorted()
 Traceback (most recent call last):
 AttributeError: 'list' object has no attribute 'print_sorted'
+
+case 14:
+passing the object to the print function
+>>> print(a)
+[1]
