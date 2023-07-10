@@ -1,0 +1,50 @@
+This file contains test cases for the MyList class
+
+For you to use this file you first have to import it
+>>> MyList = __import__("1-my_list").MyList
+
+
+case 1:
+This involves calling the function with no arguments
+>>> MyList1 = MyList()
+>>> MyList1.print_sorted()
+[]
+
+case 2:
+Instantiating the class with an empty
+>>> MyList((1, 2, 3)).print_sorted()
+[1, 2, 3]
+
+case 3:
+Instantiating the class and calling it with an invalid attribute
+>>> MyList((1, 2, 3)).get_list()
+Traceback (most recent call last):
+AttributeError: 'MyList' object has no attribute 'get_list'
+
+case 4:
+Instantiating the class with the wrong argument type
+>>> MyList(1)
+Traceback (most recent call last):
+TypeError: 'int' object is not iterable
+
+case 5:
+Instantiating the class with a string argument
+>>> MyList("abc")
+['a', 'b', 'c']
+
+case 6:
+Instantiating the class the too many arguments
+>>> MyList([1, 2, 4], [1])
+Traceback (most recent call last):
+TypeError: list expected at most 1 argument, got 2
+
+case 7:
+Instantiating the class with the right argument and calling the print_sorte
+function
+>>> MyList([3, 2, 1]).print_sorted()
+[1, 2, 3]
+
+case 8:
+Instantiation the class with the right argument with the maximum in the middle
+>>> MyList([1, 2, 4, 3]).print_sorted()
+[1, 2, 3, 4]
