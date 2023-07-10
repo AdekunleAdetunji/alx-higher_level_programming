@@ -4,6 +4,7 @@ This module contains function to check wether an object has the capability to
 accept new attributes or not
 """
 
+
 def add_attribute(obj, attr, value):
     """
     This functions takes an object, checks wether it allows for the addition
