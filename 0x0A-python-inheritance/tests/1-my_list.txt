@@ -65,3 +65,9 @@ Not instantiating the class
 >>> a.print_sorted
 Traceback (most recent call last):
 NameError: name 'a' is not defined
+
+case 12:
+Instantiating the class and calling an a method of the parent class
+>>> a = MyList().append(1)
+>>> a
+[1]
