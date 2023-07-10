@@ -83,3 +83,11 @@ case 14:
 passing the object to the print function
 >>> print(a)
 [1]
+
+case 15:
+Appending same value to the end of the list and printing the sorted list
+>>> a.append(1)
+>>> a.append(1)
+>>> a.append(1)
+>>> a.print_sorted()
+[1, 1, 1, 1]
