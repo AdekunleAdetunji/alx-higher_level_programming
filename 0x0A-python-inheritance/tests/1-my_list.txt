@@ -72,3 +72,9 @@ Instantiating the class and calling an a method of the parent class
 >>> a.append(1)
 >>> a
 [1]
+
+case 13:
+Calling a method of the child class on a parent class
+>>> list().print_sorted()
+Traceback (most recent call last):
+AttributeError: 'list' object has no attribute 'print_sorted'
