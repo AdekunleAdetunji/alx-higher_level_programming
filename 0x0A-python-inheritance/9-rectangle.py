@@ -6,6 +6,7 @@ a Rectangle class
 
 BaseGeometry = __import__("8-rectangle").BaseGeometry
 
+
 class Rectangle(BaseGeometry):
     """
     This class inherits from the BaseGeometry class defined above
