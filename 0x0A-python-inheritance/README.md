@@ -1,0 +1,1 @@
+This repo contain python scripts demonstrating how to use inheritance in python
