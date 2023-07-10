@@ -68,6 +68,7 @@ NameError: name 'a' is not defined
 
 case 12:
 Instantiating the class and calling an a method of the parent class
->>> a = MyList().append(1)
+>>> a = MyList()
+>>> a.append(1)
 >>> a
 [1]
