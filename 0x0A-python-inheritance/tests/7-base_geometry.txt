@@ -1,0 +1,85 @@
+This file contains demonstration of how to use the BaseGeometry class in the
+7-base_geometry module
+
+In other to use the function, we have to first import the class in the
+manner below
+>>> BaseGeometry = __import__("7-base_geometry").BaseGeometry
+
+After importing the class, now we can subject it to various test cases as shown
+below
+
+case 1:
+In this case the class is instantiated
+>>> bg = BaseGeometry()
+>>> bg.area()
+Traceback (most recent call last):
+Exception: area() is not implemented
+
+case 2:
+In this case the class is instantiated and the integer_validator instance
+method is called with a no arguments passed to it
+>>> bg.integer_validator()
+Traceback (most recent call last):
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+case 3:
+In this case we are testing the integer validator with the correct type of
+argument
+>>> bg.integer_validator("name", 1)
+
+case 4:
+In this case we are testing the integer validator method with too few number of
+arguments
+>>> bg.integer_validator("name")
+Traceback (most recent call last):
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+case 5:
+In this case we are calling the integer_validator method with too many
+arguments
+>>> bg.integer_validator("name", 2, 3)
+Traceback (most recent call last):
+TypeError: integer_validator() takes 3 positional arguments but 4 were given
+
+case 6:
+In this test case we are calling the area function with excess argument
+>>> bg.area(1)
+Traceback (most recent call last):
+TypeError: area() takes 1 positional argument but 2 were given
+
+case 7:
+In this case an invalid instance method is called
+>>> bg.name()
+Traceback (most recent call last):
+AttributeError: 'BaseGeometry' object has no attribute 'name'
+
+case 8:
+In this case the integer_validator method is called with an invalid value
+>>> bg.integer_validator("name", -2)
+Traceback (most recent call last):
+ValueError: name must be greater than 0
+
+case 9:
+In this case the integer_validator method is called with an invalid type
+passed as value
+>>> bg.integer_validator("name", 's')
+Traceback (most recent call last):
+TypeError: name must be an integer
+
+case 10:
+In this case the integer_validator method is called with an None argument passed
+>>> bg.integer_validator("name", None)
+Traceback (most recent call last):
+TypeError: name must be an integer
+
+case 11:
+In this case the integer_validator method is called with 0 for value
+>>> bg.integer_validator("name", 0)
+Traceback (most recent call last):
+ValueError: name must be greater than 0
+
+case 12:
+In this case the integer_validator method is called with boolean value
+>>> bg.integer_validator("name", True)
+Traceback (most recent call last):
+TypeError: name must be an integer
