@@ -83,3 +83,9 @@ In this case the integer_validator method is called with boolean value
 >>> bg.integer_validator("name", True)
 Traceback (most recent call last):
 TypeError: name must be an integer
+
+case 13:
+In this case we are creating a BaseGeometry instance with an argument
+>>> bg = BaseGeometry(1)
+Traceback (most recent call last):
+TypeError: __init__() takes 1 positional argument but 2 were given
