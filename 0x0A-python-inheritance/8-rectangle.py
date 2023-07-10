@@ -36,7 +36,9 @@ class BaseGeometry():
 
 class Rectangle(BaseGeometry):
     """
-    This class inherits from the BaseGeometry class defined above
+    This class is a child of BaseGeometry class defined above
+    It creates a rectangle instance that has the properties of the BaseGeometry
+    when called
 
     args
     @BaseGeometry: The parent class
