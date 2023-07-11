@@ -46,4 +46,4 @@ class Student():
            @json: The json dictionary object supplied to the method
         """
         for key, value in json.items():
-            self.key = value
+            setattr(self, key, value)
