@@ -5,7 +5,12 @@ This module contains a python function that creates a pascal triangle
 
 
 def find_fac(n):
-    """find the factorial of a value n"""
+    """
+    find the factorial of a value n
+
+    args
+    @n: integer whose value we want to find
+    """
     if n == 1 or n == 0:
         return 1
     return n * find_fac(n - 1)
