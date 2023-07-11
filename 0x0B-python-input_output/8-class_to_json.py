@@ -5,9 +5,6 @@ python object attribute
 """
 
 
-import json
-
-
 def class_to_json(obj):
     """
     Computes JSON serialization of an object
