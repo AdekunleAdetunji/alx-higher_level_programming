@@ -27,9 +27,12 @@ class Student():
         """
         Returns the dictionary representation of the attributes of the class
         instance
+
+        args
+           @attr: The attribute whose key:value pair is to be recovered
         """
         attr_dict = self.__dict__
-        if attr:
+        if type(attr) == list and all(type(i) == str for i in attr):
             return {key: value for key, value in attr_dict.items()
                     if key in attr}
         return self.__dict__
