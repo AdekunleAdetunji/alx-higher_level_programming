@@ -40,11 +40,10 @@ class Base():
         args
            @list_dictionaries: A list of dictionaries
         """
-        if not list_dictionaries:
+        if not list_dictionaries or type(list_dictionaries) != list:
             return "[]"
-        elif type(list_dictionaries) == list and \
-                all(type(i) == dict for i in list_dictionaries):
-            return json.dumps(list_dictionaries)
+
+        return json.dumps([dic for dic in list_dictionaries if dic])
 
     @classmethod
     def save_to_file(cls, list_objs):
