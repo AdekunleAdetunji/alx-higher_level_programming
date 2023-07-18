@@ -28,8 +28,8 @@ class Base():
         if id:
             self.id = id
         else:
-            type(self).__nb_objects += 1
-            self.id = type(self).__nb_objects
+            Base.__nb_objects += 1
+            self.id = Base.__nb_objects
 
     @staticmethod
     def to_json_string(list_dictionaries):
@@ -55,7 +55,7 @@ class Base():
         """
         with open(cls.__name__ + ".json", 'w') as fileObj:
             list_of_dict = [obj.to_dictionary() for obj in list_objs]
-            if not list_objs:
+            if list_objs is None:
                 fileObj.write("[]")
             else:
                 fileObj.write(cls.to_json_string(list_of_dict))
