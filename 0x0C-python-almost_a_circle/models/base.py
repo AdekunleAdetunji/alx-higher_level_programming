@@ -54,11 +54,10 @@ class Base():
               a file
         """
         with open(cls.__name__ + ".json", 'w') as fileObj:
-            list_of_dict = [obj.to_dictionary() for obj in list_objs]
-            if list_objs is None:
-                fileObj.write("[]")
-            else:
-                fileObj.write(cls.to_json_string(list_of_dict))
+            list_of_dict = []
+            if list_objs:
+                list_of_dict = [obj.to_dictionary() for obj in list_objs]
+            fileObj.write(cls.to_json_string(list_of_dict))
 
     @staticmethod
     def from_json_string(json_string):
