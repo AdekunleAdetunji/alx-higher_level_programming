@@ -1,0 +1,1 @@
+This repo demonstrates more lessons on how to work with relational databases
