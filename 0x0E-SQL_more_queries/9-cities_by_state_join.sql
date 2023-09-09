@@ -6,5 +6,5 @@
 --    The database name will be passed as an argument of the mysql command
 SELECT cities.id, cities.name, states.name
 FROM cities
-LEFT JOIN states ON cities.id = states.id
+INNER JOIN states ON cities.state_id = states.id
 ORDER BY cities.id;
