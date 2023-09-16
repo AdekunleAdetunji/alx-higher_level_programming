@@ -19,11 +19,11 @@ if __name__ == "__main__":
                          port=3306, charset="utf8", db=dbname)
 
     query = """SELECT * FROM states """\
-        """WHERE name LIKE '{}' """\
-        """ORDER BY id;""".format(search_str)
+        """WHERE name LIKE BINARY %s """\
+        """ORDER BY id;"""
 
     cursor = db.cursor()
-    cursor.execute(query)
+    cursor.execute(query, (search_str, ))
     rows = cursor.fetchall()
 
     for row in rows:
