@@ -17,7 +17,7 @@ if __name__ == "__main__":
                          passwd=passwd, db=dbname, charset="utf8")
 
     query = """SELECT * FROM states """\
-        """WHERE name LIKE 'N%' """\
+        """WHERE name LIKE BINARY 'N%' """\
         """ORDER BY id"""
     cursor = db.cursor()
     cursor.execute(query)
