@@ -5,19 +5,18 @@ A script that computes the number of tasks completed by user id
 
 const request = require('request');
 const url = `${process.argv[2]}?completed=true`;
-const result = {};
 function reqCallback (err, response, body) {
   if (!err) {
-    const tasks = JSON.parse(body);
-    for (const task of tasks) {
-      const key = `${task.userId}`;
-      if (result[key]) {
-        result[key]++;
-      } else {
-        result[key] = 1;
+    const todos = JSON.parse(body);
+    const completed = {};
+    todos.forEach((todo) => {
+      if (todo.completed && completed[todo.userId] === undefined) {
+        completed[todo.userId] = 1;
+      } else if (todo.completed) {
+        completed[todo.userId] += 1;
       }
-    }
-    console.log(result);
+    });
+    console.log(completed);
   }
 }
 
