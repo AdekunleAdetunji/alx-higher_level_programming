@@ -6,8 +6,14 @@ This is a script that prints the number of movies where the character
 
 const request = require('request');
 
-function reqCallback (er, response, body) {
-  console.log(JSON.parse(body).films.length);
+function reqCallback (err, response, body) {
+  if (!err) {
+    const results = JSON.parse(body).results;
+    console.log(results.reduce((count, movie) => {
+      return movie.characters.find((character) => character.endsWith('/18/'))
+        ? count + 1
+        : count;
+    }, 0));
+  }
 }
-
-request.get('https://swapi-api.alx-tools.com/api/people/18/', reqCallback);
+request.get(process.argv[2], reqCallback);
